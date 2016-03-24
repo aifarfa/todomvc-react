@@ -1,7 +1,39 @@
 {
-  "private": true,
+  "name": "todo-mvc-bkkhack",
+  "description": "TODO MVC built with React at BKK/Hack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aifarfa/todomvc-react.git"
+  },
+  "keywords": [
+    "react",
+    "todo-mvc",
+    "mean"
+  ],
+  "author": "GitHub - @aifarfa, @parnaigon, @jjmax75",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aifarfa/todomvc-react/issues"
+  },
+  "homepage": "https://github.com/aifarfa/todomvc-react#readme",
   "dependencies": {
+    "babel-preset-react": "6.5.0",
+    "react": "0.14.7",
+    "react-dom": "0.14.7",
+    "webpack": "1.12.14",
+    "webpack-dev-server": "1.14.1",
     "todomvc-app-css": "^2.0.0",
     "todomvc-common": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.4.5",
+    "sinon": "1.17.3"
   }
 }
