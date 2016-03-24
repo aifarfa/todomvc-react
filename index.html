@@ -8,6 +8,11 @@
 		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
 		<!-- CSS overrides - remove if you don't need it -->
 		<link rel="stylesheet" href="css/app.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+		<script src="index.js" type="text/babel"></script>
 	</head>
 	<body>
 		<section class="todoapp">
@@ -17,6 +22,9 @@
 			</header>
 			<!-- This section should be hidden by default and shown when there are todos -->
 			<section class="main">
+				<div id="app"></div>
+
+
 				<input class="toggle-all" type="checkbox">
 				<label for="toggle-all">Mark all as complete</label>
 				<ul class="todo-list">
