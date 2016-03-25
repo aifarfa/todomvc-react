@@ -10,13 +10,21 @@ var TodoApp = React.createClass({
 		<section className="todoapp">
 			<header className="header">
 				<h1>todos</h1>
-				<input className="new-todo" placeholder="What needs to be done?" autofocus />
+				<TodoInput />
 			</header>
           	<TodoList />
 			<AppControls />
         </section>
 	);
   }
+});
+
+var TodoInput = React.createClass({
+	render: function(){
+		return (
+			<input className="new-todo" placeholder="What needs to be done?" autofocus />
+		);
+	}
 });
 
 var TodoList = React.createClass({
@@ -36,7 +44,17 @@ var AppControls = React.createClass({
     return (
 		<footer className="footer">
 			<TodoCount />
-			<ul className="filters"></ul>
+			<ul className="filters">
+				<li>
+					<a className="selected" href="#/">All</a>
+				</li>
+				<li>
+					<a href="#/active">Active</a>
+				</li>
+				<li>
+					<a href="#/completed">Completed</a>
+				</li>
+			</ul>
 			<button className="clear-completed">Clear completed</button>
 		</footer>
     );
