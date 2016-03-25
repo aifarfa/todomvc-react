@@ -7,29 +7,38 @@ var TodoApp = React.createClass({
 
   render: function(){
       return (
-        <div>
-          <TodoList />
-          <AppControls />
-        </div>
-      );
-  }
-});
-
-var AppControls = React.createClass({
-  render: function() {
-    return (
-      <div>
-      <h2>AppControls component</h2>
-      <TodoCount />
-      </div>
-    );
+		<section className="todoapp">
+			<header className="header">
+				<h1>todos</h1>
+				<input className="new-todo" placeholder="What needs to be done?" autofocus />
+			</header>
+          	<TodoList />
+			<AppControls />
+        </section>
+	);
   }
 });
 
 var TodoList = React.createClass({
   render: function() {
     return (
-      <h2>His from the TodoList component</h2>
+		<section className="main">
+			<input className="toggle-all" type="checkbox" />
+			<label htmlFor="toggle-all">Mark all as complete</label>
+			<ul className="todo-list"></ul>
+		</section>
+    );
+  }
+});
+
+var AppControls = React.createClass({
+  render: function() {
+    return (
+		<footer className="footer">
+			<TodoCount />
+			<ul className="filters"></ul>
+			<button className="clear-completed">Clear completed</button>
+		</footer>
     );
   }
 });
